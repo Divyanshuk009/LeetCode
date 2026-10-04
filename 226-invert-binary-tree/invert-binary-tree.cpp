@@ -16,11 +16,11 @@ public:
             return nullptr;
         }
 
-        TreeNode* temp = root->left;
-        root->left = root->right;
-        root->right = temp;
+        // TreeNode* temp = root->left;
+        // root->left = root->right;
+        // root->right = temp;
 
-        // or use: swap(root->left, root->left);
+        swap(root->left, root->right);
 
         invertTree(root->left);
         invertTree(root->right);
